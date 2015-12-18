@@ -1,0 +1,16 @@
+﻿<Application x:Class="ChromeBrowser.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:converters="clr-namespace:ChromeBrowser.Converters"
+             xmlns:controls="clr-namespace:ChromeBrowser.Common"
+             StartupUri="Views/MainWindow.xaml">
+    <Application.Resources>
+            <ResourceDictionary>
+                <converters:StatusConverter x:Key="StatusConverter" />
+                <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/ButtonStyles.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Styles/TabControlStyle.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
