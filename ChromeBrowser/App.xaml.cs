@@ -1,4 +1,6 @@
-﻿using CefSharp;
+﻿using System;
+using System.Reflection;
+using CefSharp;
 
 namespace ChromeBrowser
 {
@@ -7,7 +9,7 @@ namespace ChromeBrowser
     /// </summary>
     public partial class App
     {
-        public const string DefaultUrl = "www.zcjb.com.cn";
+        public const string DefaultUrl = "http://ip.chinaz.com/";
 
         public App()
         {
@@ -27,6 +29,21 @@ namespace ChromeBrowser
             settings.CefCommandLineArgs.Add("debug-plugin-loading", "1");
             settings.CefCommandLineArgs.Add("allow-outdated-plugins", "1");
             settings.CefCommandLineArgs.Add("always-authorize-plugins", "1");
+            try
+            {
+                var clientVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+                var cefVersion = string.Format("Chrome/{0}, CEF/{1}, CefSharp/{2}", Cef.ChromiumVersion,
+                    Cef.CefVersion, Cef.CefSharpVersion);
+                settings.UserAgent = string.Format("BrowserClient/{0}  {1}", clientVersion, cefVersion);
+                settings.ProductVersion = clientVersion;
+                //settings.WindowlessRenderingEnabled = true;
+            }
+            catch (Exception exception)
+            {
+                //do nothing
+            }
+            //settings.UserAgent = "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Client/39.0.2171.95";
+            //Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240 
             //settings.CefCommandLineArgs.Add("enable-npapi", "1");
             //settings.CefCommandLineArgs.Add("ppapi-flash-path", @".\PepperFlash\pepflashplayer32_20_0_0_248.dll"); //Load a specific pepper flash version (Step 1 of 2)
             //settings.CefCommandLineArgs.Add("ppapi-flash-version", "19.0.0.185"); //Load a specific pepper flash version (Step 2 of 2)
