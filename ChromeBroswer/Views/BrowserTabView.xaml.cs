@@ -246,10 +246,6 @@ namespace BrowserClient.Views
                             browserTabViewModel.FavIcon = iconPath;
                         }
                     }
-                    /*if (e.Url.Contains(App.DefaultPageUrl))
-                    {
-                        TabBrowserControl.Browser.EvaluateScriptAsync(@"document.querySelector('input#username').value='steve';");
-                    }*/
                 }
                 catch (Exception exception)
                 {
@@ -300,16 +296,6 @@ namespace BrowserClient.Views
             if (null != TabBrowserControl && null != TabBrowserControl.Browser && TabBrowserControl.Browser.CanGoBack)
             {
                 TabBrowserControl.Browser.Back();
-                TabBrowserControl.Browser.Focus();
-            }
-        }
-
-        private void JumpHomePageCommand(object sender, RoutedEventArgs e)
-        {
-            if (null != TabBrowserControl && null != TabBrowserControl.Browser && !TabBrowserControl.Browser.IsLoading)
-            {
-                TabBrowserControl.Browser.Load(App.HomePageUrl);
-                BackButton.IsEnabled = true;
                 TabBrowserControl.Browser.Focus();
             }
         }
