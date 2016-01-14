@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="BrowserClient.Views.BrowserTabView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewModels="clr-namespace:BrowserClient.ViewModels"
+             xmlns:controls="clr-namespace:Style.Controls;assembly=Style"
+             xmlns:common="clr-namespace:Style.Common;assembly=Style"
+             mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="480"
+             d:DataContext="{d:DesignInstance viewModels:BrowserTabViewModel}">
+    <Border BorderThickness="1,0,1,1" BorderBrush="Gray" x:Name="BrowserBorder">
+        <Grid Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="24" />
+            </Grid.RowDefinitions>
+            <Border BorderBrush="Gray" Margin="0" BorderThickness="0,1,0,1" Grid.Row="0">
+                <Grid VerticalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="36" />
+                        <ColumnDefinition Width="36" />
+                        <ColumnDefinition Width="36" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <controls:ImageButton Grid.Column="0" Height="32" Width="32" Click="BackCommand"
+                                          x:Name="BackButton"
+                                          Style="{DynamicResource HoverImageButtonStyle}" ToolTip="返回"
+                                          DefaultImage="/Style;component/Assets/Images/back.png"
+                                          HoverImage="/Style;component/Assets/Images/back-hover.png" />
+                    <controls:ImageButton Grid.Column="1" Height="32" Width="32" Click="ForwardCommand"
+                                          x:Name="ForwardButton"
+                                          Style="{DynamicResource HoverImageButtonStyle}" ToolTip="前进"
+                                          DefaultImage="/Style;component/Assets/Images/forward.png"
+                                          HoverImage="/Style;component/Assets/Images/forward-hover.png" />
+                    <controls:ImageButton Grid.Column="2" Height="32" Width="32"
+                                          x:Name="RefreshButton" Click="RefreshCommand"
+                                          Style="{DynamicResource HoverImageButtonStyle}" ToolTip="刷新"
+                                          DefaultImage="/Style;component/Assets/Images/refresh.png"
+                                          HoverImage="/Style;component/Assets/Images/refresh-hover.png" />
+                    <TextBox Grid.Column="3" Height="28" VerticalContentAlignment="Center" Margin="5,0,5,0"
+                             PreviewKeyDown="EnterEeyDown" Background="#F7F8F9"
+                             Text="{Binding Address, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <controls:ImageButton Grid.Column="4" Height="32" Width="32" Visibility="Collapsed"
+                                          Style="{DynamicResource HoverImageButtonStyle}"
+                                          Click="SettingCommand" ToolTip="设置" x:Name="SettingButton"
+                                          common:FrameworkElementExtension.ContextMenuPlacementTarget="{Binding RelativeSource={RelativeSource Self}}"
+                                          ContextMenuService.IsEnabled="False"
+                                          DefaultImage="/Style;component/Assets/Images/earth.png"
+                                          HoverImage="/Style;component/Assets/Images/earth.png">
+                        <controls:ImageButton.ContextMenu>
+                            <ContextMenu Name="SettingMenu" StaysOpen="False" Placement="Bottom">
+                                <MenuItem Header="打开新页面" Click="OpenNewTabCommand" />
+                                <Separator />
+                                <MenuItem Header="下载管理" Visibility="Collapsed" />
+                                <MenuItem Header="清除缓存" Click="ClearCacheCommand" Visibility="Collapsed" />
+                                <Separator />
+                                <MenuItem Header="退出" Click="ExitCommand" />
+                            </ContextMenu>
+                        </controls:ImageButton.ContextMenu>
+                    </controls:ImageButton>
+                </Grid>
+            </Border>
+
+            <Grid Background="White" Grid.Row="1">
+                <Border Background="White">
+                    <WindowsFormsHost x:Name="BrowserHost" />
+                </Border>
+            </Grid>
+
+            <Border Grid.Row="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="150" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="{Binding StatusMessage}" TextTrimming="CharacterEllipsis" />
+                    <TextBlock Grid.Column="1" Text="{Binding ClientVersion}"
+                               Foreground="#595b5d"
+                               HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12" Margin="5,0" />
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</UserControl>

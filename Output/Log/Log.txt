@@ -1,0 +1,78 @@
+2016-01-14 18:26:21,296 [8] INFO  BrowserClient.App - Initialize Settings
+2016-01-14 18:26:21,425 [8] INFO  BrowserClient.App - Initialize Cef
+2016-01-14 18:26:21,581 [8] INFO  BrowserClient.App - Cef initialize successed.Chromium: 39.0.2171.95, CEF: r2069, CefSharp: 39.0.2.0
+2016-01-14 18:26:27,387 [11] INFO  BrowserClient.Handlers.RequestHandler - OnBeforeBrowse:http://192.168.100.30/log/login.htm
+2016-01-14 18:26:33,839 [14] ERROR Common.Utils.ImageHelper - System.Net.WebException: 远程服务器返回错误: (404) 未找到。
+   在 System.Net.HttpWebRequest.GetResponse()
+   在 Common.Utils.ImageHelper.DownloadImage(String url, String savePath) 位置 E:\Workspace\GitHub\ChromeBroswer\Common\Utils\ImageHelper.cs:行号 76
+2016-01-14 18:26:33,972 [8] ERROR BrowserClient.Views.BrowserTabView - System.IO.FileNotFoundException: 未能找到文件“E:\Workspace\GitHub\ChromeBroswer\Output\Assets/Icons/defaultIcon.png”。
+文件名:“E:\Workspace\GitHub\ChromeBroswer\Output\Assets/Icons/defaultIcon.png”
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   在 System.IO.File.Copy(String sourceFileName, String destFileName)
+   在 BrowserClient.Views.BrowserTabView.<>c__DisplayClass15.<DownloadFileCompleted>b__14() 位置 E:\Workspace\GitHub\ChromeBroswer\ChromeBroswer\Views\BrowserTabView.xaml.cs:行号 274
+2016-01-14 18:35:24,909 [10] INFO  BrowserClient.App - Initialize Settings
+2016-01-14 18:35:25,067 [10] INFO  BrowserClient.App - Initialize Cef
+2016-01-14 18:35:25,209 [10] INFO  BrowserClient.App - Cef initialize successed.Chromium: 39.0.2171.95, CEF: r2069, CefSharp: 39.0.2.0
+2016-01-14 18:35:31,278 [10] ERROR BrowserClient.Views.BrowserTabView - System.UriFormatException: 无效的 URI: 未能分析主机名。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 System.Uri..ctor(String uriString)
+   在 BrowserClient.Views.BrowserTabView.<>c__DisplayClass9.<OnBrowserAddressChanged>b__8() 位置 E:\Workspace\GitHub\ChromeBroswer\ChromeBroswer\Views\BrowserTabView.xaml.cs:行号 132
+2016-01-14 18:35:31,348 [10] ERROR BrowserClient.Views.BrowserTabView - System.UriFormatException: 无效的 URI: 未能分析主机名。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 System.Uri..ctor(String uriString)
+   在 BrowserClient.Views.BrowserTabView.<Browser_FrameLoadEnd>b__13() 位置 E:\Workspace\GitHub\ChromeBroswer\ChromeBroswer\Views\BrowserTabView.xaml.cs:行号 241
+2016-01-14 18:37:55,458 [9] INFO  BrowserClient.App - Initialize Settings
+2016-01-14 18:37:55,581 [9] INFO  BrowserClient.App - Initialize Cef
+2016-01-14 18:37:55,700 [9] INFO  BrowserClient.App - Cef initialize successed.Chromium: 39.0.2171.95, CEF: r2069, CefSharp: 39.0.2.0
+2016-01-14 18:38:01,020 [9] ERROR BrowserClient.Views.BrowserTabView - System.UriFormatException: 无效的 URI: 未能分析主机名。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 System.Uri..ctor(String uriString)
+   在 BrowserClient.Views.BrowserTabView.<>c__DisplayClass9.<OnBrowserAddressChanged>b__8() 位置 E:\Workspace\GitHub\ChromeBroswer\ChromeBroswer\Views\BrowserTabView.xaml.cs:行号 132
+2016-01-14 18:38:01,095 [9] ERROR BrowserClient.Views.BrowserTabView - System.UriFormatException: 无效的 URI: 未能分析主机名。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 System.Uri..ctor(String uriString)
+   在 BrowserClient.Views.BrowserTabView.<Browser_FrameLoadEnd>b__13() 位置 E:\Workspace\GitHub\ChromeBroswer\ChromeBroswer\Views\BrowserTabView.xaml.cs:行号 241
+2016-01-14 18:38:03,531 [11] INFO  BrowserClient.Handlers.RequestHandler - OnBeforeBrowse:http://www.baidu.com/
+2016-01-14 18:38:04,818 [11] INFO  BrowserClient.Handlers.RequestHandler - OnBeforeBrowse:http://www.baidu.com/
+2016-01-14 18:38:07,799 [12] INFO  BrowserClient.Handlers.RequestHandler - OnBeforePluginLoad, Url:https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/baiduia/JSocket_9a52fc3e.swf?0.05, PolicyUrl:https://www.baidu.com/.
+2016-01-14 18:38:07,806 [12] INFO  BrowserClient.Handlers.RequestHandler - Plugin Info, Name:Shockwave Flash, Version:18,0,0,95, Path:E:\Workspace\GitHub\ChromeBroswer\Output\plugins\NPSWF32_18_0_0_95.dll,Description:Shockwave Flash 18.0 d0.
+2016-01-14 18:38:07,811 [12] INFO  BrowserClient.Handlers.RequestHandler - OnBeforePluginLoad, Url:https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/baiduia/JSocket_9a52fc3e.swf?0.05, PolicyUrl:https://www.baidu.com/.
+2016-01-14 18:38:07,814 [12] INFO  BrowserClient.Handlers.RequestHandler - Plugin Info, Name:Shockwave Flash, Version:18,0,0,95, Path:E:\Workspace\GitHub\ChromeBroswer\Output\plugins\NPSWF32_18_0_0_95.dll,Description:Shockwave Flash 18.0 d0.
+2016-01-14 18:38:08,388 [12] INFO  BrowserClient.Handlers.RequestHandler - OnBeforePluginLoad, Url:, PolicyUrl:https://www.baidu.com/.
+2016-01-14 18:38:08,391 [12] INFO  BrowserClient.Handlers.RequestHandler - Plugin Info, Name:Shockwave Flash, Version:18,0,0,95, Path:E:\Workspace\GitHub\ChromeBroswer\Output\plugins\NPSWF32_18_0_0_95.dll,Description:Shockwave Flash 18.0 d0.
+2016-01-14 18:38:08,395 [12] INFO  BrowserClient.Handlers.RequestHandler - OnBeforePluginLoad, Url:, PolicyUrl:https://www.baidu.com/.
+2016-01-14 18:38:08,398 [12] INFO  BrowserClient.Handlers.RequestHandler - Plugin Info, Name:Shockwave Flash, Version:18,0,0,95, Path:E:\Workspace\GitHub\ChromeBroswer\Output\plugins\NPSWF32_18_0_0_95.dll,Description:Shockwave Flash 18.0 d0.
+2016-01-14 18:38:08,444 [12] INFO  BrowserClient.Handlers.RequestHandler - OnBeforePluginLoad, Url:https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/env_beb83b45.swf, PolicyUrl:https://www.baidu.com/.
+2016-01-14 18:38:08,447 [12] INFO  BrowserClient.Handlers.RequestHandler - Plugin Info, Name:Shockwave Flash, Version:18,0,0,95, Path:E:\Workspace\GitHub\ChromeBroswer\Output\plugins\NPSWF32_18_0_0_95.dll,Description:Shockwave Flash 18.0 d0.
+2016-01-14 18:38:08,451 [12] INFO  BrowserClient.Handlers.RequestHandler - OnBeforePluginLoad, Url:https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/env_beb83b45.swf, PolicyUrl:https://www.baidu.com/.
+2016-01-14 18:38:08,453 [12] INFO  BrowserClient.Handlers.RequestHandler - Plugin Info, Name:Shockwave Flash, Version:18,0,0,95, Path:E:\Workspace\GitHub\ChromeBroswer\Output\plugins\NPSWF32_18_0_0_95.dll,Description:Shockwave Flash 18.0 d0.
+2016-01-14 18:38:08,489 [12] INFO  BrowserClient.Handlers.RequestHandler - OnBeforePluginLoad, Url:, PolicyUrl:https://www.baidu.com/.
+2016-01-14 18:38:08,492 [12] INFO  BrowserClient.Handlers.RequestHandler - Plugin Info, Name:Shockwave Flash, Version:18,0,0,95, Path:E:\Workspace\GitHub\ChromeBroswer\Output\plugins\NPSWF32_18_0_0_95.dll,Description:Shockwave Flash 18.0 d0.
+2016-01-14 18:38:08,495 [12] INFO  BrowserClient.Handlers.RequestHandler - OnBeforePluginLoad, Url:, PolicyUrl:https://www.baidu.com/.
+2016-01-14 18:38:08,498 [12] INFO  BrowserClient.Handlers.RequestHandler - Plugin Info, Name:Shockwave Flash, Version:18,0,0,95, Path:E:\Workspace\GitHub\ChromeBroswer\Output\plugins\NPSWF32_18_0_0_95.dll,Description:Shockwave Flash 18.0 d0.
+2016-01-14 18:38:10,696 [11] INFO  BrowserClient.Handlers.RequestHandler - OnBeforeBrowse:https://www.baidu.com/
+2016-01-14 18:38:11,353 [12] INFO  BrowserClient.Handlers.RequestHandler - OnBeforePluginLoad, Url:, PolicyUrl:https://www.baidu.com/.
+2016-01-14 18:38:11,356 [12] INFO  BrowserClient.Handlers.RequestHandler - Plugin Info, Name:Shockwave Flash, Version:18,0,0,95, Path:E:\Workspace\GitHub\ChromeBroswer\Output\plugins\NPSWF32_18_0_0_95.dll,Description:Shockwave Flash 18.0 d0.
+2016-01-14 18:38:11,359 [12] INFO  BrowserClient.Handlers.RequestHandler - OnBeforePluginLoad, Url:, PolicyUrl:https://www.baidu.com/.
+2016-01-14 18:38:11,362 [12] INFO  BrowserClient.Handlers.RequestHandler - Plugin Info, Name:Shockwave Flash, Version:18,0,0,95, Path:E:\Workspace\GitHub\ChromeBroswer\Output\plugins\NPSWF32_18_0_0_95.dll,Description:Shockwave Flash 18.0 d0.
+2016-01-14 18:38:11,517 [12] INFO  BrowserClient.Handlers.RequestHandler - OnBeforePluginLoad, Url:https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/env_beb83b45.swf, PolicyUrl:https://www.baidu.com/.
+2016-01-14 18:38:11,520 [12] INFO  BrowserClient.Handlers.RequestHandler - Plugin Info, Name:Shockwave Flash, Version:18,0,0,95, Path:E:\Workspace\GitHub\ChromeBroswer\Output\plugins\NPSWF32_18_0_0_95.dll,Description:Shockwave Flash 18.0 d0.
+2016-01-14 18:38:11,524 [12] INFO  BrowserClient.Handlers.RequestHandler - OnBeforePluginLoad, Url:https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/env_beb83b45.swf, PolicyUrl:https://www.baidu.com/.
+2016-01-14 18:38:11,528 [12] INFO  BrowserClient.Handlers.RequestHandler - Plugin Info, Name:Shockwave Flash, Version:18,0,0,95, Path:E:\Workspace\GitHub\ChromeBroswer\Output\plugins\NPSWF32_18_0_0_95.dll,Description:Shockwave Flash 18.0 d0.
+2016-01-14 18:38:11,673 [12] INFO  BrowserClient.Handlers.RequestHandler - OnBeforePluginLoad, Url:https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/baiduia/JSocket_9a52fc3e.swf?0.05, PolicyUrl:https://www.baidu.com/.
+2016-01-14 18:38:11,676 [12] INFO  BrowserClient.Handlers.RequestHandler - Plugin Info, Name:Shockwave Flash, Version:18,0,0,95, Path:E:\Workspace\GitHub\ChromeBroswer\Output\plugins\NPSWF32_18_0_0_95.dll,Description:Shockwave Flash 18.0 d0.
+2016-01-14 18:38:11,679 [12] INFO  BrowserClient.Handlers.RequestHandler - OnBeforePluginLoad, Url:https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/baiduia/JSocket_9a52fc3e.swf?0.05, PolicyUrl:https://www.baidu.com/.
+2016-01-14 18:38:11,681 [12] INFO  BrowserClient.Handlers.RequestHandler - Plugin Info, Name:Shockwave Flash, Version:18,0,0,95, Path:E:\Workspace\GitHub\ChromeBroswer\Output\plugins\NPSWF32_18_0_0_95.dll,Description:Shockwave Flash 18.0 d0.
+2016-01-14 18:38:11,756 [12] INFO  BrowserClient.Handlers.RequestHandler - OnBeforePluginLoad, Url:, PolicyUrl:https://www.baidu.com/.
+2016-01-14 18:38:11,759 [12] INFO  BrowserClient.Handlers.RequestHandler - Plugin Info, Name:Shockwave Flash, Version:18,0,0,95, Path:E:\Workspace\GitHub\ChromeBroswer\Output\plugins\NPSWF32_18_0_0_95.dll,Description:Shockwave Flash 18.0 d0.
+2016-01-14 18:38:11,762 [12] INFO  BrowserClient.Handlers.RequestHandler - OnBeforePluginLoad, Url:, PolicyUrl:https://www.baidu.com/.
+2016-01-14 18:38:11,765 [12] INFO  BrowserClient.Handlers.RequestHandler - Plugin Info, Name:Shockwave Flash, Version:18,0,0,95, Path:E:\Workspace\GitHub\ChromeBroswer\Output\plugins\NPSWF32_18_0_0_95.dll,Description:Shockwave Flash 18.0 d0.
+2016-01-14 18:38:15,733 [9] ERROR BrowserClient.Views.BrowserTabView - System.UriFormatException: 无效的 URI: 未能分析主机名。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 System.Uri..ctor(String uriString)
+   在 BrowserClient.Views.BrowserTabView.<>c__DisplayClass9.<OnBrowserAddressChanged>b__8() 位置 E:\Workspace\GitHub\ChromeBroswer\ChromeBroswer\Views\BrowserTabView.xaml.cs:行号 132
+2016-01-14 18:38:15,785 [9] ERROR BrowserClient.Views.BrowserTabView - System.UriFormatException: 无效的 URI: 未能分析主机名。
+   在 System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   在 System.Uri..ctor(String uriString)
+   在 BrowserClient.Views.BrowserTabView.<Browser_FrameLoadEnd>b__13() 位置 E:\Workspace\GitHub\ChromeBroswer\ChromeBroswer\Views\BrowserTabView.xaml.cs:行号 241
