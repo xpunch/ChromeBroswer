@@ -26,8 +26,8 @@
     <ProjectGuid>{614A5F79-4185-471E-A79A-7011975B7392}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BrowserClient</RootNamespace>
-    <AssemblyName>BrowserClient</AssemblyName>
+    <RootNamespace>ChromeBroswer</RootNamespace>
+    <AssemblyName>ChromeBroswer</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>

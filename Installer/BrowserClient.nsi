@@ -1,13 +1,13 @@
 ; HM NIS Edit Wizard helper defines
-!define PRODUCT_NAME "招采进宝桌面客户端"
-!define PRODUCT_VERSION "1.0.1.0"
-!define PRODUCT_PUBLISHER "上海易招标信息技术有限公司"
-!define PRODUCT_WEB_SITE "http://www.zcjb.com.cn"
-!define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\ZCJB\DesktopClient"
-!define PRODUCT_UNINST_KEY "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\ZCJB DesktopClient"
+!define PRODUCT_NAME "ChromeBroswer"
+!define PRODUCT_VERSION "1.1.0.0"
+!define PRODUCT_PUBLISHER "OldLemon"
+!define PRODUCT_WEB_SITE "https://github.com/Orange637/ChromeBroswer"
+!define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\ChromeBroswer"
+!define PRODUCT_UNINST_KEY "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\ChromeBroswer"
 !define PRODUCT_UNINST_ROOT_KEY "HKLM"
-!define PRODUCT_FILE_PATH "SourceFiles"
-!define PRODUCT_APP_FILE "BrowserClient.exe"
+!define PRODUCT_FILE_PATH "..\Output"
+!define PRODUCT_APP_FILE "ChromeBroswer.exe"
 
 SetCompressor lzma
 
@@ -41,11 +41,11 @@ SetCompressor lzma
 ; MUI end ------
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
 OutFile "招采进宝桌面客户端安装文件.exe"
-InstallDir "$PROGRAMFILES\ZCJB\DesktopClient"
+InstallDir "$PROGRAMFILES\ChromeBroswer"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" "${PRODUCT_APP_FILE}"
 ShowInstDetails show
 ShowUnInstDetails show
-BrandingText "招采进宝www.zcjb.com.cn"
+BrandingText "${PRODUCT_WEB_SITE}"
 ;SetDatablockOptimize on
 
 Section "MainSection" SEC01
@@ -57,7 +57,7 @@ Section "MainSection" SEC01
   CreateDirectory "$INSTDIR\Plugins"
   CreateDirectory "$INSTDIR\Assets\Htmls"
   CreateDirectory "$INSTDIR\Assets\Icons"
-  File "${PRODUCT_FILE_PATH}\${PRODUCT_APP_FILE}"
+  ;File "${PRODUCT_FILE_PATH}\${PRODUCT_APP_FILE}"
   File "${PRODUCT_FILE_PATH}\BrowserClient.exe.config"
   File "${PRODUCT_FILE_PATH}\cef.pak"
   File "${PRODUCT_FILE_PATH}\CefSharp.BrowserSubprocess.Core.dll"
@@ -134,15 +134,14 @@ Section "MainSection" SEC01
   File "/oname=$INSTDIR\Assets\Icons\defaultIcon.png" "${PRODUCT_FILE_PATH}\Assets\Icons\defaultIcon.png"
   File "/oname=$INSTDIR\Plugins\Assets\Htmls\Error.html" "${PRODUCT_FILE_PATH}\Assets\Htmls\Error.html"
   ;File "License.txt"
-  CreateDirectory "$SMPROGRAMS\上海汇招信息技术有限公司\招采进宝"
-  CreateShortCut "$SMPROGRAMS\上海汇招信息技术有限公司\招采进宝\招采进宝桌面客户端.lnk" "$INSTDIR\${PRODUCT_APP_FILE}"
-  CreateShortCut "$DESKTOP\招采进宝桌面客户端.lnk" "$INSTDIR\${PRODUCT_APP_FILE}"
+  CreateDirectory "$SMPROGRAMS\ChromeBroswer"
+  CreateShortCut "$SMPROGRAMS\ChromeBroswer\ChromeBroswer.lnk" "$INSTDIR\${PRODUCT_APP_FILE}"
+  CreateShortCut "$DESKTOP\ChromeBroswer.lnk" "$INSTDIR\${PRODUCT_APP_FILE}"
 SectionEnd
 
 Section -AdditionalIcons
   WriteIniStr "$INSTDIR\${PRODUCT_NAME}.url" "InternetShortcut" "URL" "${PRODUCT_WEB_SITE}"
-  ;CreateShortCut "$SMPROGRAMS\招采进宝\招采进宝.lnk" "$INSTDIR\${PRODUCT_NAME}.url" "" "NewLogo.ico"
-  CreateShortCut "$SMPROGRAMS\上海汇招信息技术有限公司\招采进宝\卸载招采进宝桌面客户端.lnk" "$INSTDIR\uninst.exe"
+  CreateShortCut "$SMPROGRAMS\ChromeBroswer\Uninstall ChromeBroswer.lnk" "$INSTDIR\uninst.exe"
 SectionEnd
 
 Section -Post
@@ -168,15 +167,8 @@ Function un.onInit
 FunctionEnd
 
 Section Uninstall
-  ;Delete "$INSTDIR\${PRODUCT_NAME}.url"
-  ;Delete "$INSTDIR\uninst.exe"
-  ;Delete "$INSTDIR\${PRODUCT_APP_FILE}"
-
-  ;Delete "$SMPROGRAMS\上海汇招信息技术有限公司\招采进宝\卸载招采进宝桌面客户端.lnk"
-  ;Delete "$SMPROGRAMS\上海汇招信息技术有限公司\招采进宝\招采进宝.lnk"
-  ;Delete "$SMPROGRAMS\上海汇招信息技术有限公司\招采进宝\招采进宝桌面客户端.lnk"
-  Delete "$DESKTOP\招采进宝桌面客户端.lnk"
-  RMDir /r "$SMPROGRAMS\上海汇招信息技术有限公司\招采进宝"
+  Delete "$DESKTOP\ChromeBroswer.lnk"
+  RMDir /r "$SMPROGRAMS\ChromeBroswer"
   RMDir /r "$INSTDIR"
 
   DeleteRegKey ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}"
